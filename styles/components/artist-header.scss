@@ -1,0 +1,37 @@
+/**
+ *  Styles for the artiist header at the top of the app ******************************************************
+ **/
+
+.artist-header {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 4rem;
+
+  .artist-img {
+    position: absolute;
+    width: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -15%);
+    }
+  }
+
+  .artist-name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0, 0), rgba(0,0,0, 1));
+    padding: 4rem;
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+}
