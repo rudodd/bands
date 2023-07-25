@@ -1,0 +1,61 @@
+/**
+ *  Styles for the artiist header at the top of the app ******************************************************
+ **/
+
+.artist-header {
+  position: relative;
+  height: 375px;
+  overflow: hidden;
+
+  @include for-phone-only {
+    height: auto;
+  }
+
+  .artist-img {
+    position: absolute;
+    width: 100%;
+
+    @include for-phone-only {
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -15%);
+
+      @include for-phone-only {
+        position: relative;
+      }
+    }
+  }
+
+  .artist-name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0, 0), rgba(0,0,0, 1));
+    padding: 4rem $app-padding;
+
+    @include tablet-down {
+      background: black;
+      padding: 1rem $tablet-padding 0;
+    }
+ 
+    h1 {
+      font-size: 4rem;
+      line-height: 1;
+      margin: 0;
+
+      @include tablet-down{
+        font-size: 3rem;
+      }
+
+      @include for-phone-only {
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/** 
+ * Styles for the albums component *******************************************
+ **/
+
+.album-container {
+  padding: 1.5rem $app-padding;
+
+  @include tablet-down {
+    padding: $tablet-padding;
+  }
+
+  .albums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .album {
+      position: relative;
+      width: calc(25% - 1.666rem);
+
+      @include tablet-down {
+        width: calc(50% - 1rem);
+      }
+
+      @include for-phone-only {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h3 {
+        margin: 1rem 0 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &.latest {
+
+        &::before {
+          position: absolute;
+          height: 35px;
+          width: 35px;
+          padding: 13px;
+          content: 'Latest release';
+          background: black;
+          color: white;
+          border: solid 2px white;
+          border-radius: 50%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          font-weight: 600;
+          top: 0;
+          right: 0;
+          transform: translate(20%, -20%);
+          z-index: +1;
+        }
+      }
+
+      &::after {
+        opacity: 0%;
+        content: 'Listen';
+        position: absolute;
+        top: calc(50% - 25px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        img {
+          opacity: 70%;
+          transition: ease all 0.5s;
+        }
+
+        &::after {
+          opacity: 100%;
+          transition: ease all 0.5s;
+        }
+      }
+    }
+  }
+}

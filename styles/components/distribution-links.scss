@@ -1,0 +1,34 @@
+/**
+ * Styles for the distribution links component *******************************
+ **/
+
+ .dist-links {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem $app-padding;
+
+  @include tablet-down {
+    padding: 1.5rem $tablet-padding;
+    gap: 1rem;
+  }
+
+  a {
+
+    div {
+
+      img {
+        height: 45px;
+        width: 45px;
+        background: white;
+        border: solid 2px white;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @include for-phone-only {
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+  }
+}
