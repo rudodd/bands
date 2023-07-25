@@ -60,11 +60,7 @@ export default function Home(props) {
                   "@context": "http://schema.org",
                   "@type": "MusicGroup",
                   "url": "https://${host}",
-                  "image": [
-                    "https://${host}${content.imgPath}/1x1/ezra-foster.jpg",
-                    "https://${host}${content.imgPath}4x3/ezra-foster.jpg",
-                    "https://${host}${content.imgPath}16x9/ezra-foster.jpg"
-                  ],
+                  "image": ${content.schemaImages},
                   "name": "${content.bandName}",
                   "sameAs": "${content.links.spotify}",
                   "description": "${content.bandBio}"

@@ -10,6 +10,11 @@ const siteContent = {
       amazon: 'https://www.amazon.com/music/player/artists/B00YI4H5YS/ezra-foster',
       pandora: 'https://www.pandora.com/artist/ezra-foster/ARmkVqn293n6Vrq',
     },
+    schemaImages: [
+      "/img/ezra-foster/artist/1x1/ezra-foster.jpg",
+      "/img/ezra-foster/artist/4x3/ezra-foster.jpg",
+      "/img/ezra-foster/artist/16x9/ezra-foster.jpg"
+    ],
     albums: [
       {
         name: 'Worth a Shot',
@@ -60,6 +65,11 @@ const siteContent = {
       amazon: 'https://www.amazon.com/music/player/artists/B08NZDS2BT/dr-floydbeck',
       pandora: 'https://www.pandora.com/artist/dr-floydbeck/ARP7hqZ6cpn4q3g',
     },
+    schemaImages: [
+      "/img/dr-floydbeck/artist/1x1/dr-floydbeck.jpg",
+      "/img/dr-floydbeck/artist/4x3/dr-floydbeck.jpg",
+      "/img/dr-floydbeck/artist/16x9/dr-floydbeck.jpg"
+    ],
     albums: [
       {
         name: 'Frontier',
@@ -92,6 +102,11 @@ const siteContent = {
       amazon: 'https://www.amazon.com/music/player/artists/B08NXVHYNW/crouch-foster',
       pandora: 'https://www.pandora.com/artist/crouch-and-foster/ARlcJzzj5Pxg4j6',
     },
+    schemaImages: [
+      "/img/crouch-and-foster/artist/1x1/crouch-and-foster.jpg",
+      "/img/crouch-and-foster/artist/4x3/crouch-and-foster.jpg",
+      "/img/crouch-and-foster/artist/16x9/crouch-and-foster.jpg"
+    ],
     albums: [
       {
         name: "Smellin' the Sky",
