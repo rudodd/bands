@@ -8,6 +8,8 @@ import { empty } from '../helpers';
 // import components
 import Head from 'next/head'
 import ArtistHeader from '../components/ArtistHeader';
+import DistributionLinks from '../components/DistributionLinks';
+import Albums from '../components/Albums';
 
 export default function Home(props) {
 
@@ -53,7 +55,12 @@ export default function Home(props) {
           </Head>
 
           <main>
+            <DistributionLinks links={content.links} />
             <ArtistHeader name={content.bandName} imgPath={content.imgPath} />
+            <div className="bio">
+              <p>{content.bandBio}</p>
+            </div>
+            <Albums albums={content.albums} imgPath={content.imgPath} name={content.bandName} />
           </main>
 
           <footer>
