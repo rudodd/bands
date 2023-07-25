@@ -22,11 +22,11 @@ export default function Home(props) {
 
   useEffect(() => {
     switch(host) {
-      case 'drfloydbeck.com':
-        setContent(siteContent[host])
+      case 'www.drfloydbeck.com':
+        setContent(siteContent['drfloydbeck.com'])
         break;
-      case 'crouchandfoster.com':
-        setContent(siteContent[host])
+      case 'www.crouchandfoster.com':
+        setContent(siteContent['crouchandfoster.com'])
         break;
       default:
         setContent(siteContent['ezrafoster.com'])
