@@ -7,7 +7,7 @@ $tablet-padding: 2rem;
 }
 
 @mixin tablet-down {
-  @media (max-width: 750px) { @content; }
+  @media (max-width: 900px) { @content; }
 }
 
 
@@ -71,3 +71,4 @@ body {
 @import './components/albums.scss';
 @import './components/artist-header.scss';
 @import './components/distribution-links.scss';
+@import './components/player-modal.scss';

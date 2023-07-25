@@ -10,12 +10,15 @@ import Head from 'next/head'
 import ArtistHeader from '../components/ArtistHeader';
 import DistributionLinks from '../components/DistributionLinks';
 import Albums from '../components/Albums';
+import PlayerModal from '../components/PlayerModal';
 
 export default function Home(props) {
 
   const { host } = props;
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   useEffect(() => {
     setContent(siteContent[host])
@@ -26,6 +29,12 @@ export default function Home(props) {
       setLoading(false);
     }
   }, [content])
+
+  useEffect(() => {
+    if (!empty(selectedPlayer)) {
+      setModalOpen(true);
+    }
+  }, [selectedPlayer])
 
   return (
     <>
@@ -60,8 +69,12 @@ export default function Home(props) {
             <div className="bio">
               <p>{content.bandBio}</p>
             </div>
-            <Albums albums={content.albums} imgPath={content.imgPath} name={content.bandName} />
+            <Albums albums={content.albums} imgPath={content.imgPath} name={content.bandName} setPlayer={setSelectedPlayer} />
           </main>
+
+          {modalOpen &&
+            <PlayerModal open={modalOpen} setOpen={setModalOpen} player={selectedPlayer} setPlayer={setSelectedPlayer} />
+          }
 
           <footer>
             <p>&copy; Copyright {new Date().getFullYear()} Rustin Dodd.  All rights reserved.</p>
