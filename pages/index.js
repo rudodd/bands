@@ -21,7 +21,16 @@ export default function Home(props) {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   useEffect(() => {
-    setContent(siteContent[host])
+    switch(host) {
+      case 'drfloydbeck.com':
+        setContent(siteContent[host])
+        break;
+      case 'crouchandfoster.com':
+        setContent(siteContent[host])
+        break;
+      default:
+        setContent(siteContent['ezrafoster.com'])
+    }
   }, [host]);
 
   useEffect(() => {
