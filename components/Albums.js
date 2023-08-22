@@ -1,6 +1,3 @@
-// import library functionality
-import React, { useState } from 'react';
-
 export default function Albums(props) {
 
   const { albums, imgPath, name, setPlayer } = props;
