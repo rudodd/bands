@@ -2,6 +2,11 @@
 
 Bands is just a simple app that acts as a website template for my various musical projects.  It takes the domain name and delivers content based on which site the user is visiting.
 
+Live domains:
+- [Ezra Foster](https://www.ezrafoster.com)
+- [Dr. Floydbeck](https://www.drfloydbeck.com)
+- [Crouch and Foster](https://www.crouchandfoster.com)
+
 ## Features
 - Supports multiple domains
 - Delivers content based on domain name
