@@ -1,7 +1,8 @@
-// site variables
+// Site variables
 $app-padding: 3rem;
 $tablet-padding: 2rem;
 
+// Responsive mixins
 @mixin for-phone-only {
   @media (max-width: 500px) { @content; }
 }
@@ -10,7 +11,7 @@ $tablet-padding: 2rem;
   @media (max-width: 900px) { @content; }
 }
 
-
+// App-wide styles
 html,
 body {
   padding: 0;
@@ -67,7 +68,7 @@ body {
   }
 }
 
-// import components stylesheets
+// Import components stylesheets
 @import './components/albums.scss';
 @import './components/artist-header.scss';
 @import './components/distribution-links.scss';

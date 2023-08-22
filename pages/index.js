@@ -1,16 +1,16 @@
-// import library functionality
+// Import library functionality
 import React, { useState, useEffect } from 'react';
 
-// import custom functionality
+// Import custom functionality and variables
 import siteContent from '../content';
 import { empty } from '../helpers';
 
-// import components
-import Head from 'next/head'
+// Import components
 import ArtistHeader from '../components/ArtistHeader';
 import DistributionLinks from '../components/DistributionLinks';
 import Albums from '../components/Albums';
 import PlayerModal from '../components/PlayerModal';
+import AppHead from '../components/AppHead';
 
 export default function Home(props) {
 
@@ -47,27 +47,9 @@ export default function Home(props) {
 
   return (
     <>
-      {loading ? (
-        <></>
-      ) : (
+      {!loading &&
         <div className="app-container">
-          <Head>
-            <title>{content.pageTitle}</title>
-            <meta name="description" content={content.bandBio} />
-            <link rel="icon" href="/favicon.ico" />
-            <script type="application/ld+json">
-              {`{
-                  "@context": "http://schema.org",
-                  "@type": "MusicGroup",
-                  "url": "https://${host}",
-                  "image": ${content.schemaImages},
-                  "name": "${content.bandName}",
-                  "sameAs": "${content.links.spotify}",
-                  "description": "${content.bandBio}"
-                }`}
-            </script>
-          </Head>
-
+          <AppHead host={host} content={content} />
           <main>
             <DistributionLinks links={content.links} />
             <ArtistHeader name={content.bandName} imgPath={content.imgPath} />
@@ -76,16 +58,14 @@ export default function Home(props) {
             </div>
             <Albums albums={content.albums} imgPath={content.imgPath} name={content.bandName} setPlayer={setSelectedPlayer} />
           </main>
-
           {modalOpen &&
             <PlayerModal open={modalOpen} setOpen={setModalOpen} player={selectedPlayer} setPlayer={setSelectedPlayer} />
           }
-
           <footer>
             <p>&copy; Copyright {new Date().getFullYear()} Rustin Dodd.  All rights reserved.</p>
           </footer>
         </div>
-      )}
+      }
     </>
   )
 }
