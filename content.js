@@ -72,6 +72,12 @@ const siteContent = {
     ],
     albums: [
       {
+        name: 'Locate Linda Comu',
+        year: '2024',
+        img: 'locate-linda-comu.jpg',
+        embed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6HEUFC4k7PuWxZZZzDoFEU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+      },
+      {
         name: 'Frontier',
         year: '2022',
         img: 'frontier.jpg',
